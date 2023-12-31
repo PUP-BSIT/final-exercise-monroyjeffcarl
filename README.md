@@ -6,4 +6,4 @@
 
 ## Netlify URL
 
-Click the hyperlink to access my Netlify Site [Monroy's Netlify SIte](https://jeff-monroy-first-creation.app)
+Click the hyperlink to access my Netlify Site: [Monroy's Netlify Site](https://jeff-monroy-first-creation.app)

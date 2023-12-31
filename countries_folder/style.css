@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#country-details {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#region-countries {
+    text-align: left;
+}

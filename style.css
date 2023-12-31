@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", "Lucida Grande", "Arial", sans-serif;
+}
+
+header {
+  background-color: #fff;
+  color: #2e2e2e;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  z-index: 1000;
+  padding-right: 20px;
+  margin: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.logo {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav img {
+  border: 0;
+  border-radius: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#welcome {
+  background-image: url("./media/backgrounds/welcome_bg.png");
+  background-size: cover;
+  grid-area: welcome;
+  height: 700px;
+}
+
+#profile {
+  background-image: url("./media/backgrounds/profile_bg.png");
+  background-size: cover;
+  grid-area: profile;
+}
+
+#hobbies {
+  background-image: url("./media/backgrounds/hobbies_bg.png");
+  background-size: cover;
+  grid-area: hobbies;
+}
+
+#works {
+  background-image: url("./media/backgrounds/works_bg.png");
+  background-size: cover;
+  grid-area: works;
+}
+
+#testimonials {
+  background-image: url("./media/backgrounds/testimonials_bg.png");
+  background-size: cover;
+  grid-area: testimonials;
+}
+
+#gallery {
+  background-image: url("./media/backgrounds/gallery_bg.png");
+  background-size: cover;
+  grid-area: gallery;
+}
+
+#goal {
+  background-image: url("./media/backgrounds/goals_bg.png");
+  background-size: cover;
+  grid-area: goal;
+}
+
+.hobby-container {
+  display: grid;
+  grid-template-columns: repeat(5, 3fr);
+  grid-gap: 15px;
+  justify-content: center; /* Horizontal centering */
+  list-style: none;
+  padding: 60px 20px 20px 20px;
+}
+
+.hobby-art {
+  grid-area: hobart;
+}
+
+.hobby-music {
+  grid-area: hobmusic;
+}
+
+.hobby-book {
+  grid-area: hobbook;
+}
+
+.hobby-dogs {
+  grid-area: hobdogs;
+}
+
+.hobby-travel {
+  grid-area: hobtravel;
+}
+
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+  grid-gap: 15px;
+  justify-content: center;
+  list-style: none;
+  padding: 60px 20px 20px 20px;
+}
+
+.item-one {
+  grid-area: itemone;
+}
+
+.item-two {
+  grid-area: itemtwo;
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+  grid-gap: 15px;
+  justify-content: center;
+  list-style: none;
+  padding: 60px 20px 20px 20px;
+}
+
+.testi-one {
+  grid-area: testione;
+}
+
+.testi-two {
+  grid-area: testitwo;
+}
+
+.testi-three {
+  grid-area: testithree;
+}
+
+.testi-four {
+  grid-area: testifour;
+}
+
+@media (min-width: 769px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "welcome"
+      "profile"
+      "hobbies"
+      "works"
+      "testimonials"
+      "gallery"
+      "goal";
+  }
+
+  #profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .hobby-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "hobart hobmusic hobbook hobdogs hobtravel";
+  }
+
+  .item-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "itemone itemtwo";
+  }
+
+  .testimonials-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "testione testitwo"
+      "testithree testifour";
+  }
+}
+
+.borders {
+  padding: 100px 20px 20px 20px;
+  height: 600px;
+}
+
+.welcome-info {
+  color: #2e2e2e;
+  padding-top: 170px;
+  padding-left: 130px;
+  text-align: left;
+}
+
+.welcome-hello {
+  font-size: 30px;
+  color: #2e2e2e;
+}
+
+.welcome-details {
+  font-size: 15px;
+  color: #2e2e2e;
+}
+
+.profile-left {
+  order: 1;
+  padding-left: 160px;
+}
+
+.profile-right {
+  order: 2;
+  padding-right: 180px;
+}
+
+.profile-image {
+  width: 300px;
+}
+
+.profile-name {
+  font-size: 40px;
+  font-weight: 800;
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-details {
+  font-size: 24px;
+  color: #2e2e2e;
+}
+
+.profile-desc {
+  font-size: 17px;
+  color: #2e2e2e;
+  text-align: justify;
+  padding-top: 30px;
+}
+
+.profile-ps {
+  font-size: 14px;
+  color: #2e2e2e;
+  text-align: left;
+  padding-top: 30px;
+}
+
+.item-title-light {
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.item-title-dark {
+  color: #2e2e2e;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.hobby-icons {
+  width: 50px;
+}
+
+.hobby-art,
+.hobby-music,
+.hobby-book,
+.hobby-dogs,
+.hobby-travel {
+  position: relative;
+  width: 230px;
+  height: 245px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.hobby-art:hover,
+.hobby-music:hover,
+.hobby-book:hover,
+.hobby-dogs:hover,
+.hobby-travel:hover {
+  position: relative;
+  width: 230px;
+  height: 245px;
+  background-color: #2e2e2e;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.hobby-title,
+.hobby-details {
+  color: #2e2e2e;
+}
+
+.hobby-hidden {
+  color: #ffffff;
+}
+
+.hobby-title:hover,
+.hobby-details:hover {
+  color: #ffffff;
+}
+
+.hobby-title {
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.item-one,
+.item-two {
+  position: relative;
+  width: 230px;
+  height: 245px;
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.button-title {
+  color: #fff;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.testi-one,
+.testi-two,
+.testi-three,
+.testi-four {
+  position: relative;
+  width: 400px;
+  height: 170px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.testi-name,
+.testi-comm {
+  color: #2e2e2e;
+}
+
+.testi-name {
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.testi-icons {
+  width: 50px;
+}
+
+.gallery-title {
+  padding-top: 165px;
+}
+
+.gallery-comment {
+  color: #2e2e2e;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.gallery-intro {
+  font-size: 17px;
+  color: #fff;
+  text-align: justify;
+}
+
+.dear-jeff {
+  font-size: 15px;
+  color: #fff;
+  text-align: justify;
+  padding-top: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.last {
+  font-size: 13px;
+  color: #fff;
+  padding-top: 25px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: #2e2e2e;
+}
+
+#gallery img {
+  width: 200px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
